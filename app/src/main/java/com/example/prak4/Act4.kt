@@ -132,7 +132,7 @@ fun FormDataDiri(modifier: Modifier) {
                 Text(text = "Alamat :"+alamat, color = Color.White)
 
             }
-    }
+        }
     }
 }
 
