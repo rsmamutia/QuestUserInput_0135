@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun FormDataDiri(modifier: Modifier) {
@@ -99,8 +100,19 @@ fun FormDataDiri(modifier: Modifier) {
                 alamat=textAlamat
             }
         ) {
-
+            Text(stringResource(id= R.string.submit))
         }
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom =
+                    dimensionResource(id = R.dimen.padding_medium),
+                top = dimensionResource(
+                    id = R.dimen.padding.medium
+                )
+            ),
+            thickness = dimensionResource(id = R.dimen.divider_tipis)
+            color = Color.DarkGray
+        )
     }
 }
 
