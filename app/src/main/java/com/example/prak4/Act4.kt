@@ -1,7 +1,8 @@
 package com.example.prak4
 
-import android.R
+import com.example.prak4.R
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -36,12 +37,12 @@ fun FormDataDiri(modifier: Modifier) {
     var textNama by remember { mutableStateOf(value = "") }
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "") }
-    var gender: List<R.string> = ListOf("Laki-laki", "Perempuan")
+    var gender: List<String> = listOf("Laki-laki", "Perempuan")
 
     //variabel-variabel untuk menyimpan data yang diperoleh dari komponen UI
     var nama by remember { mutableStateOf(value = "") }
-    var name by remember { mutableStateOf(value = "") }
-    var name by remember { mutableStateOf(value = "") }
+    var jenis by remember { mutableStateOf(value = "") }
+    var alamat by remember { mutableStateOf(value = "") }
 
     Column(
         modifier = Modifier.padding(top = 50.dp),
@@ -65,7 +66,7 @@ fun FormDataDiri(modifier: Modifier) {
                     modifier = Modifier.selectable(
                         selected = textJK == item,
                         onClick = { textJK = item }
-                    ), VerticalAlignment = Allignment.CenterVertically) {
+                    ), verticalAlignment =  Alignment.CenterVertically) {
                     RadioButton(
                         selected = textJK == item,
                         onClick = {
@@ -112,10 +113,10 @@ fun FormDataDiri(modifier: Modifier) {
                 bottom =
                     dimensionResource(id = R.dimen.padding_medium),
                 top = dimensionResource(
-                    id = R.dimen.padding.medium
+                    id = R.dimen.padding_medium
                 )
             ),
-            thickness = dimensionResource(id = R.dimen.divider_tipis)
+            thickness = dimensionResource(id = R.dimen.divider_tipis),
             color = Color.DarkGray
         )
         ElevatedCard(
@@ -137,5 +138,5 @@ fun FormDataDiri(modifier: Modifier) {
 
 
 
-}
+
 
