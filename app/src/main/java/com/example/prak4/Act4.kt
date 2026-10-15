@@ -50,3 +50,29 @@ fun FormDataDiri(modifier: Modifier) {
             }
         )
 
+        Row {
+            gender.forEach { item ->
+                Row(
+                    modifier = Modifier.selectable(
+                        selected = textJK == item,
+                        onClick = { textJK = item }
+                    ), VerticalAlignment = Allignment.CenterVertically) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                    Text(item)
+                }
+            }
+        }
+
+
+
+
+}
+
+@Composable
+fun ListOf(x0: String, x1: String) {
+    TODO("Not yet implemented")
+}
